@@ -28,6 +28,8 @@ Repository name填入`gitlearn`，其他保持默认设置，点击“Create repository”按钮
 
 * Push an existing repository from the local computer command line
 
+fisrt time
+
 ```
 git remote add origin git@github.com:Gabegit/gitlearn.git
 git push -u origin master
@@ -42,4 +44,9 @@ git add README.md
 git commit -m "first commit"
 git remote add origin git@github.com:Gabegit/gitlearn.git
 git push -u origin master
+```
+* push changed local repository to remote one 
+
+```
+$ git push origin master
 ```
