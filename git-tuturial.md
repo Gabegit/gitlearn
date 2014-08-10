@@ -1,10 +1,8 @@
----
 
-title: "Git 常用命令"
+# `Git` 常用命令 
 
----
 
-基于[learnGit教程](https://raw.githubusercontent.com/michaelliao/learngit/master/Git_Commands@pengloo53.md)
+说明，以下内容基于[learnGit教程](https://raw.githubusercontent.com/michaelliao/learngit/master/Git_Commands@pengloo53.md)
 
 ####1、基础
 - `git config --global user.name "Your Name"`设置你的仓库用户名（用于标识提交者）
