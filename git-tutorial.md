@@ -1,32 +1,41 @@
 
-# `Git` 常用命令 
-
+## `Git` 常用命令 
 
 说明，以下内容基于[learnGit教程](https://raw.githubusercontent.com/michaelliao/learngit/master/Git_Commands@pengloo53.md)
 
-####1、基础
+###1、基础
+#### 初始化
 - `git config --global user.name "Your Name"`设置你的仓库用户名（用于标识提交者）
 - `git config --global user.email "email@example.com"`设置你的仓库邮箱（用于标识提交者）
 - `git init`  初始化一个git仓库
+
+#### add and commit 添加到缓存stag与提交的仓库repo
 - `git add --all`  添加所有更改的文件
 - `git add filename1` 当然可以指定添加filename1
-- `git commit -m "commit message"` 添加更改的信息，必须要有，不然报错，不建议不加。
+- `git add .` 添加当前目录下所有增加的文件到缓存中
+- `git commit -m "commit message"` 添加更改的信息。
+- `git commit -am "add and commit msg"
+
+#### status and log
 - `git status` 查看git当前状态
 - `git diff filename1` 查看filename1到底修改了哪些内容
 - `git log` 查看最近的提交日志
-- `git log --pretty=oneline` 单行显示提交日志
+- `git log --pretty=oneline` 单行显示提交日志,全部hash码
+- `git log --oneline` 单行显示简单的提交日志，部分hash码。
+
+#### 退回到以前版本
 -  `git reset --hard commitID` 利用`git log`得到的commitID返回版本
 -  `git reset --hard HEAD^`回到上一个版本
 -  `git reflog` 查看命令的历史，可以找到`git log`看不到的commitID，因为`git log`只显示当前的提交日志，如果你提交了一次，退回版本后又后悔了，就能查看上次提交的commitID
 -  `git checkout -- filename1` 利用版本库中的版本替换工作区中的文件。功能有2：
 	-  撤销文件修改，分两种情况：
-		- 撤销工作区中的修改（没有使用`git add`命令添加到暂存区）
-		- 撤销暂存区中的修改（添加到了暂存区又做了修改）
+    		- 撤销工作区中的修改（没有使用`git add`命令添加到暂存区）
+    		- 撤销暂存区中的修改（添加到了暂存区又做了修改）
 	- 找回删除的文件
 		- 工作区中文件误删了，可以通过此命令从版本库中找回
 - `git reset HEAD filename1` 撤销add，回到工作区
--  `git rm filename1` 删除文件
--  `git remote add origin https://github.com/pengloo53/learngit.git` 将本地库关联到github远程库上
+- `git rm filename1` 删除文件
+- `git remote add origin https://github.com/pengloo53/learngit.git` 将本地库关联到github远程库上
 - `git push -u origin master` 第一次推送的时候要加上`-u`参数，可以将本地库的master分支与远程库的master分支关联起来；下次提交就不需要加`-u`了。
 - `git clone https://github.com/pengloo53/learngit.git` 克隆远程库到本地
 
