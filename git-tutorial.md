@@ -13,8 +13,8 @@
 - `git add --all`  添加所有更改的文件
 - `git add filename1` 当然可以指定添加filename1
 - `git add .` 添加当前目录下所有增加的文件到缓存中
-- `git commit -m "commit message"` 添加更改的信息。
-- `git commit -am "add and commit msg"
+- `git commit -m "M1- commit message"` 添加更改的信息。
+- `git commit -am` "M2 - add and commit msg"
 
 #### status and log
 - `git status` 查看git当前状态
@@ -41,17 +41,23 @@
 
 ####2、分支管理
 - `git checkout -b dev`创建dev分支并切换到dev。相当于`git branch dev`、`git checkout dev`两条命令。
+- `git switch -c issue-101` create a new branch issue-101; same command like `checkout -b`
 - `git branch`查看当前分支
 - `git merge dev`合并指定分支到当前分支，如，你现在master分支，那么执行命令就将dev分支合并到了master分支上。
 - `git branch -d dev`删除dev分支
-- `git log --graph --pretty=oneline --abbrev-commit`查看分支合并图
+- `git log --graph --oneline`查看分支合并图
 - `git merge --no-ff -m "merge with no-ff" dev`禁用「Fast forward」，也就是保留分支的相关信息。
+- `git switch feature` and `git rebase master` merge branch feature to  master like merge,but without branches left
+
+###### stash and stash pop现场储藏与恢复
 - `git stash` 将工作区现场储藏起来，等以后恢复后继续工作。通常用于处理更为着急的任务时，例如：bug。
 - `git stash list` 查看保存的工作现场
 - `git stash apply`恢复工作现场
 - `git stash drop` 删除stash内容
 - `git stash pop` 恢复的同时直接删除stash内容
 - `git stash apply stash@{0}` 恢复指定的工作现场，当你保存了不只一份工作现场时。
+
+
 - `git branch -D feature-vulcan` 强行删除分支。用于不需要合并，就地删除的情况。
 - `git remote` 查看远程库的信息，一般返回origin。
 - `git remote -v` 查看远程库的详细信息。
