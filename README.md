@@ -3,7 +3,7 @@
 There are some skills using `git and github` in `Windows 8`.
 
 ## ssh keygen
-* ´ò¿ª`bash.exe` 
+* æ‰“å¼€`bash.exe` 
 ```
 ssh-keygen -t rsa -C "email@yourgithub.com"
 input id_rsa
@@ -16,15 +16,15 @@ id_rsa
 id_rsa.pub
 known_hosts
 ```
-* µÇÂ½`GitHub`£¬´ò¿ª`Account settings`£¬`SSH Keys`Ò³Ãæ£º
+* ç™»é™†`GitHub`ï¼Œæ‰“å¼€`Account settings`ï¼Œ`SSH Keys`é¡µé¢ï¼š
 
-µã`Add SSH Key`£¬ÌîÉÏÈÎÒâTitle£¬ÔÚKeyÎÄ±¾¿òÀïÕ³Ìù`id_rsa.pub`ÎÄ¼şµÄÄÚÈİ
+ç‚¹`Add SSH Key`ï¼Œå¡«ä¸Šä»»æ„Titleï¼Œåœ¨Keyæ–‡æœ¬æ¡†é‡Œç²˜è´´`id_rsa.pub`æ–‡ä»¶çš„å†…å®¹
 
 ## add the remote repository
 
-* in GitHub£¬`Create a new repo`
+* in GitHubï¼Œ`Create a new repo`
 
-Repository nameÌîÈë`gitlearn`£¬ÆäËû±£³ÖÄ¬ÈÏÉèÖÃ£¬µã»÷¡°Create repository¡±°´Å¥
+Repository nameå¡«å…¥`gitlearn`ï¼Œå…¶ä»–ä¿æŒé»˜è®¤è®¾ç½®ï¼Œç‚¹å‡»â€œCreate repositoryâ€æŒ‰é’®
 
 * Push an existing repository from the local computer command line
 
@@ -34,6 +34,11 @@ fisrt time
 git remote add origin git@github.com:Gabegit/gitlearn.git
 git push -u origin master
 ```
+
+- æƒ³è¦åœ¨æœ¬åœ°cloneè‡ªå·±çš„ç§äººé¡¹ç›®çš„æ—¶å€™ï¼Œä¸ºäº†ç§äººé¡¹ç›®çš„å®‰å…¨ï¼Œå°±éœ€è¦åŠ ä¸Šè´¦å·ä¸å¯†ç è¿›è¡ŒéªŒè¯â¬‡
+
+`git clone https://github-username:github-password@github.com/github-username/github-template-name.git`
+
 
 * Create a new repository on the command line
 
