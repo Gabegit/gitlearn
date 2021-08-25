@@ -35,9 +35,9 @@ git remote add origin git@github.com:Gabegit/gitlearn.git
 git push -u origin master
 ```
 
-- 想要在本地clone自己的私人项目的时候，为了私人项目的安全，就需要加上账号与密码进行验证⬇
+- ===想要在本地clone自己的私人项目的时候，为了私人项目的安全，就需要加上账号与密码进行验证==
 
-`git clone https://github-username:github-password@github.com/github-username/github-template-name.git`
+[new way: token required](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/)
 
 
 * Create a new repository on the command line
